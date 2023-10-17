@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #607d8b;
+}
+.container .cup{
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    position: relative;
+}
+.container .cup-head{
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.container .tea{
+    width: 180px;
+    height: 37px;
+    background-color: #C58E4C;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.container .cup-handle{
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    width: 137px;
+    height: 139px;
+    border: 15px solid #fff;
+    border-radius: 50%;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    transform: rotate(45deg);
+    border-radius: 50%;
+}
+.container .cup-footer{
+    position: absolute;
+    width: 400px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 50%;
+    left: -96px;
+    z-index: -2;
+    bottom: -43px;
+
+    background: #e0e0e0;
+    box-shadow: inset 20px 20px 60px #fff,
+                inset -20px -20px 60px #ffffff;
+}
+
+.container .fog span{
+    display: inline-block;
+    width: 10px;
+    height: 150px;
+    background-color: #ffffff7a;
+    border-radius: 50%;
+    animation: test 5s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.7s );
+}
+
+/* Define animation */
+@keyframes test
+{
+    /* Start position */
+    0%
+    {
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+    15%{
+        opacity: 1;
+
+    }
+    /* Middle position */
+    50%
+    {
+        transform: translateY(-150px) scaleX(5);
+    }
+    /* End position */
+    95%{
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(-300px) scaleX(10);
+        opacity: 0;
+    }
+}
